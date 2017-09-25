@@ -12,14 +12,14 @@ import { AlbumService } from '../album.service';
 export class MarketplaceComponent implements OnInit {
   albums: Album[];
 
-  constructor(private router: Router, private albumService: AlbumService){}
+  constructor(private router: Router, private albumService: AlbumService) {}
 
-  ngOnInit(){
+  ngOnInit() {
     this.albums = this.albumService.getAlbums();
   }
 
-  gotToDetailPage(clickedAlbum: Album) {
+  goToDetailPage(clickedAlbum: Album) {
     this.router.navigate(['albums', clickedAlbum.id]);
-  }
+  };
 
 }
